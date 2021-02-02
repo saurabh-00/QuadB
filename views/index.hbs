@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <title>HODLINFO</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <div class="company">
+                <span class="company_name">HODLINFO</span><span>.com</span>
+            </div>
+            <div class="sponsor">
+                <span>Powered By </span><span class="sponsor_name">Finstreet</span>
+            </div>
+        </div>
+        <div class="unit">
+            <div>INR <i class="fas fa-caret-down"></i></div>
+            <div>BTC <i class="fas fa-caret-down"></i></div>
+        </div>
+        <div class="accessories">
+            <div class="rate">58</div>
+            <div class="telegram"><i class="fab fa-telegram"></i> Connect Telegram</div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch">
+                    <input type="checkbox">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <ol>
+        <li class="topics">
+            <div>name</div>
+            <div>last</div>
+            <div>Buy / Sell Price</div>
+            <div>volume</div>
+            <div>base_unit</div>
+        </li>
+        {{#each list}}
+        <li>
+            <div>{{this.name}}</div>
+            <div>&#8377 {{this.last}}</div>
+            <div>&#8377 {{this.buy}} / &#8377 {{this.sell}}</div>
+            <div>{{this.volume}}</div>
+            <div>{{this.base_unit}}</div>
+        </li>
+        {{/each}}
+    </ol>
+</body>
+
+</html>
